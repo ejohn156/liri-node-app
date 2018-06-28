@@ -109,9 +109,10 @@ spotify
   .then(function(response) {
     console.log("Artist(s): " + response.tracks.items[0].artists[0].name);
     console.log("Song Name: " + response.tracks.items[0].name);
-    console.log("Preview Link: " + response.tracks.items[0].href);
+    console.log("Preview Link: " + response.tracks.items[0].external_urls.spotify);
     console.log("Album: " + response.tracks.items[0].album.name);
-  })
+
+})
   .catch(function(err) {
     console.log(err);
   });
